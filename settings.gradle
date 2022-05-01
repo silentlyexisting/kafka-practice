@@ -1,0 +1,4 @@
+rootProject.name = 'kafka-practice'
+
+includeBuild 'consumer'
+includeBuild 'producer'

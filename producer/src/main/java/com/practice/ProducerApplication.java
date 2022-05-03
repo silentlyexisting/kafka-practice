@@ -10,4 +10,5 @@ public class ProducerApplication {
 		SpringApplication.run(ProducerApplication.class, args);
 	}
 
+
 }

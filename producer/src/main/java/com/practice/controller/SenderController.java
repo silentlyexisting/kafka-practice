@@ -16,12 +16,12 @@ public class SenderController {
     private KafkaTemplate<String, Student> kafkaTemplate;
 
     @PostMapping
-    public void sendUser(@RequestBody Student student) {
+    public void produceStudent(@RequestBody Student student) {
         kafkaTemplate.send("kafka-practice", new Student(
                 student.firstName(),
                 student.lastName(),
                 student.city(),
-                student.university()
+                student.college()
         ));
     }
 }

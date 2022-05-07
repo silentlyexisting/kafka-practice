@@ -1,6 +1,5 @@
 package com.practice.model;
 
-import com.practice.dto.UniversityDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -27,12 +26,12 @@ public class Student {
     private String lastName;
     private String city;
     @OneToOne(cascade = CascadeType.ALL)
-    private University university;
+    private College college;
 
-    public Student(String firstName, String lastName, String city, University university) {
+    public Student(String firstName, String lastName, String city, College college) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.city = city;
-        this.university = university;
+        this.college = college;
     }
 }

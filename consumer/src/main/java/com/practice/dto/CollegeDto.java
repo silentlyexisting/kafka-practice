@@ -9,7 +9,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class UniversityDto {
+public class CollegeDto {
 
     private String name;
     private Long grade;

@@ -2,7 +2,7 @@ package com.practice.service;
 
 import com.practice.dto.StudentDto;
 import com.practice.model.Student;
-import com.practice.model.University;
+import com.practice.model.College;
 import com.practice.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,16 +19,16 @@ public class StudentServiceImpl implements StudentService {
                 studentDto.getFirstName(),
                 studentDto.getLastName(),
                 studentDto.getCity(),
-                consumeUniversity(studentDto)
+                toCollege(studentDto)
         ));
     }
 
-    private University consumeUniversity(StudentDto student) {
-        return new University(
-                student.getUniversity().getName(),
-                student.getUniversity().getGrade(),
-                student.getUniversity().getAttendance(),
-                student.getUniversity().getSubjects()
+    private College toCollege(StudentDto student) {
+        return new College(
+                student.getCollege().getName(),
+                student.getCollege().getGrade(),
+                student.getCollege().getAttendance(),
+                student.getCollege().getSubjects()
                 );
     }
 }

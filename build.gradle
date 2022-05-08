@@ -2,3 +2,8 @@ task start {
     dependsOn gradle.includedBuild('producer').task(':bootRun')
     dependsOn gradle.includedBuild('consumer').task(':bootRun')
 }
+
+task clean {
+    dependsOn gradle.includedBuild('producer').task(':clean')
+    dependsOn gradle.includedBuild('consumer').task(':clean')
+}
